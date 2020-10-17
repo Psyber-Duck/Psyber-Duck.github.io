@@ -6,7 +6,7 @@
 .team__item:after{position:absolute;left:0;top:0;height:100%;width:100%;background:rgba(34,48,96,0.3);content:"";z-index:-1;opacity:0;-webkit-transition:all,0.5s,ease-out,.5s;-o-transition:all,0.5s,ease-out,.5s;transition:all,0.5s,ease-out,.5s}
 
 .team__item:hover:after{opacity:1}
-.team__item:hover .team__text{top:-175px}
+.team__item:hover .team__text{top:-105px}
 .team__item:hover .team__text .team__title{border-bottom:1px solid rgba(183,183,183,0.2);padding:0 0 26px;margin-bottom:26px;opacity:0;visibility:hidden;position:relative;bottom:initial;opacity:1;visibility:visible}
 .team__item .team__text p{top:0;opacity:1;visibility:visible;-webkit-transition:all .5s ease .3s;-o-transition:all .5s ease .3s;transition:all .5s ease .3s}
 .team__item:hover .team__text ul{opacity:1;visibility:visible;top:34px;-webkit-transition:all .5s ease .5s;-o-transition:all .5s ease .5s;transition:all .5s ease .5s}
@@ -48,5 +48,10 @@
     font-family: 'Noto Serif', serif;
 }
 .team__text > ul {
+   margin-left: 30%;
+}
+@media(max-width:768px){
+.team__text > ul {
    margin-left: 22%;
+}
 }
