@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
+    <link rel="stylesheet" href="assets/css/form.css">
+     <style>
         .contact-map {
   height: 610px;
   position: relative;
@@ -54,6 +55,13 @@
   -ms-transform: translate(-24px, -24px);
   transform: translate(-24px, -24px);
 }
+         
+@media (max-width:1000px)
+{
+    .footer-social{
+    display: none;
+         }
+         }
     </style>
 </head>
     <header>
@@ -127,50 +135,41 @@
     </div>
            <section >
                <div style="width: 90%;margin-left: 5%;margin-right: 5%;">
-                
+        
             <div class="row">
                 <div class="col-12">
                     <h2 class="contact-title" style="text-align: center;font-size: 2em;margin-top: 30px;text-decoration: underline;">Get in Touch</h2>
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <button type="submit" class="button button-contactForm boxed-btn">Send</button>
-                        </div>
-                    </form>
+                <section>
+                            <script type="text/javascript">var submitted=false;</script>
+    
+                             <!--Update the URL for thank you page on form submit -->
+                             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+                             onload="if(submitted) {window.location='https://vibhubhatia007.github.io/';}"></iframe> 
+    
+							<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdcRJBu5JaC1wtpCeF_z-6FSdm2YSJzAldPoBCKSBYiMSlPvw/formResponse" target="hidden_iframe" onsubmit="validateForm(); ">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="entry.2090628137" id="name" placeholder="Enter your name" required/>
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="entry.51222334" id="email" placeholder="Enter your Email or Contact Number" required/>
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="entry.126818951" id="message" rows="3" placeholder="Leave a Message"required></textarea>
+									</div>
+								</div>
+								<ul id="navigation" >
+									<li class="button-header margin-left"><input type="submit" value="Send Message"  class="btn"/></li>
+								</ul>
+							</form>
+						</section>      
                 </div>
                 <div class="col-lg-3 offset-lg-1">
-<!--
-                    <div class="media contact-info">
-                        <span class="contact-info__icon"><i class="ti-home" style="color: purple;"></i></span>
-                        <div class="media-body">
-                            <h3 style="color: purple;">Buttonwood, California.</h3>
-                            <p style="color: purple;">Rosemead, CA 91770</p>
-                        </div>
-                    </div>
--->
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-tablet" style="color: purple;"></i></span>
                         <div class="media-body">
@@ -290,6 +289,7 @@
 </div>
 
 <!-- JS here -->
+ <script>function validateForm(){alert("Your Message has been successfully placed");}</script>
 
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
